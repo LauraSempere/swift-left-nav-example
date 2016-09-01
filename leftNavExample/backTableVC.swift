@@ -46,18 +46,11 @@ class backTableVC: UITableViewController {
 
         return cell
     }
-     
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-        selectedTab = 1
-        print("Before the segue")
+    
+    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        print("Selected row::\(indexPath.row)")
         let tabVC = self.storyboard?.instantiateViewControllerWithIdentifier("TabController") as! TabBarController
-       
+        selectedPage = "NextVC"
     }
- 
 
 }

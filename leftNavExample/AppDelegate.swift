@@ -9,6 +9,7 @@
 import UIKit
 
 var selectedTab:Int = 0
+var selectedPage:String!
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {

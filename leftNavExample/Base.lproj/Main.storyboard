@@ -121,10 +121,10 @@
             </objects>
             <point key="canvasLocation" x="2583" y="1388"/>
         </scene>
-        <!--View Controller-->
+        <!--Item-->
         <scene sceneID="ge7-y1-v1N">
             <objects>
-                <viewController id="86d-ah-bBl" customClass="ViewController" customModule="leftNavExample" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="FirstVC" id="86d-ah-bBl" customClass="ViewController" customModule="leftNavExample" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="aTx-Sl-uu8"/>
                         <viewControllerLayoutGuide type="bottom" id="MDW-Al-L8i"/>
@@ -142,8 +142,14 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <tabBarItem key="tabBarItem" title="Item" id="qqB-tG-cNC"/>
                     <navigationItem key="navigationItem" id="57j-Gf-l5Z">
                         <barButtonItem key="leftBarButtonItem" title="Item" id="PjA-33-9rR"/>
+                        <barButtonItem key="rightBarButtonItem" title="Next" id="qaF-gj-HLj">
+                            <connections>
+                                <segue destination="uUs-W8-vdf" kind="show" id="Fzm-Vt-Bfr"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="Open" destination="PjA-33-9rR" id="o2W-hC-n3f"/>
@@ -152,6 +158,45 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6Fj-rA-ypW" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2544" y="598"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="hFd-Jf-bbg">
+            <objects>
+                <viewController storyboardIdentifier="NextVC" id="uUs-W8-vdf" customClass="ViewController" customModule="leftNavExample" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="H4g-3F-fJM"/>
+                        <viewControllerLayoutGuide type="bottom" id="w1B-kP-UTP"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="sdf-dH-mKl">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="NEXT" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gwv-vJ-lUB">
+                                <rect key="frame" x="278" y="289.5" width="44" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="gwv-vJ-lUB" firstAttribute="centerX" secondItem="sdf-dH-mKl" secondAttribute="centerX" id="85h-pC-xlI"/>
+                            <constraint firstItem="gwv-vJ-lUB" firstAttribute="centerY" secondItem="sdf-dH-mKl" secondAttribute="centerY" id="PEY-eJ-GRT"/>
+                        </constraints>
+                    </view>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" id="dFp-Pz-PjL">
+                        <barButtonItem key="leftBarButtonItem" title="Item" id="mlh-af-mob"/>
+                        <barButtonItem key="rightBarButtonItem" title="Next" id="6xy-2e-tBi"/>
+                    </navigationItem>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="Open" destination="mlh-af-mob" id="t2L-mV-btg"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="e8c-C2-dqs" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3270" y="598"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="1el-yx-owz">

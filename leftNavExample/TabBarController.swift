@@ -9,7 +9,7 @@
 import UIKit
 
 class TabBarController: UITabBarController {
-    
+   
     override func viewDidLoad() {
         super.viewDidLoad()
         self.selectedIndex = selectedTab
@@ -20,6 +20,11 @@ class TabBarController: UITabBarController {
     override func viewWillAppear(animated: Bool) {
        self.selectedIndex = selectedTab
         print("Sel Index::: \(selectedTab)")
+        let navVC = self.viewControllers![0] as! UINavigationController
+        if let selPage = selectedPage{
+        let nextVC = self.storyboard?.instantiateViewControllerWithIdentifier(selPage) as! ViewController
+        navVC.pushViewController(nextVC, animated: true)
+        }
     }
 //
     override func didReceiveMemoryWarning() {
